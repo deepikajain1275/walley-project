@@ -71,7 +71,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		sdcardImages.setOnItemLongClickListener(new OnItemLongClickListener() {
 			public boolean onItemLongClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				// Log.e("MyApp", "get onItem Click position= " + position);
 				imageid = ImageUri(position);
 				storeid(imageid);
 				return true;
@@ -92,11 +91,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	}
 
 	public boolean onOptionsItemSelected(MenuItem item) {
-		/*
-		 * Intent i = new Intent(); i.setClassName( "com.example.cursor",
-		 * "com.example.cursor.myservice" ); bindService( i, null,
-		 * Context.BIND_AUTO_CREATE);
-		 */
+		
 		Intent i = new Intent(getApplicationContext(), Myservice.class);
 
 		switch (item.getItemId()) {
